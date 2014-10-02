@@ -1,0 +1,126 @@
+@import 'libs.less';
+@import 'elements.less';
+@import 'top_css.less';
+
+h1.logo {
+  float: left; width: 85%; text-align: left; color:@c-title;
+
+  span {
+    display: none;
+  }
+}
+
+/* ===============
+  Fonts
+   =============== */
+html.touch {//override if touch device
+  .page > header {height: auto; top: 0}
+} 
+
+h1,h2,h3,h4 {font-weight: 500; text-transform: uppercase; text-align: left;}
+
+/* ===============
+  LESS Variables
+   =============== */
+@c-text: #222;
+@c-selection: #b3d4fc;
+@c-title: black;
+@c-nav: #7f868a;
+@c-nav-hover: #7f868a;
+@c-link: #0099ff;
+@c-link-hover: #0099ff;
+
+/* ==========================================================================
+   General styles
+   ========================================================================== */
+
+.left,
+.right {
+  float: left;
+  width: 49%;
+}
+
+.right {
+  float: right;
+}
+
+.iphone {
+  margin-left: -40px;
+}
+
+/* ===============
+  Footer
+   =============== */
+.footer-container {
+  text-align: left;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media only screen and (min-width: 480px) {
+  h1.logo {width: auto}
+
+  .oldie nav a {
+    margin: 0 0.7%;
+  }
+
+  .three_column {
+    width: 320px; padding: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  html.touch {//override if touch device
+  }
+
+  nav.primary {
+
+    float: right;
+    width: 350px;
+    display: block !important;
+    margin: 20px 0 0 0;
+
+    a {
+      float: left;
+      margin: 0 5px;
+      padding: 0 5px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .left, .right {
+    float: left;
+    width: 48%;
+    margin-right: 1%;
+    img {max-width: 100%}
+    h3 {margin-top: 0}
+  }
+
+  .right {
+    float: right;
+  }
+}
+
+@media only screen and (min-width: 1254px) {
+  /* ===============
+     Maximal Width
+     =============== */
+  .wrapper,
+  .page > header,
+  .page > footer {
+    width: 825px; /* 1140px - 10% for margins */
+    margin: 0 auto;
+  }
+
+  .three_column {
+    width: 320px;
+    float: left; margin: 20px 0;
+    &.middle {margin: 20px 30px}
+  }
+}
+
+@import 'print_helper.less';
+@import 'fonts.less';
