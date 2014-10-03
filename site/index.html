@@ -10,6 +10,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,400italic,500italic' rel='stylesheet' type='text/css'>
     <script src="/js/vendor/modernizr.2.8.3.js"></script>
   </head>
   <body>
@@ -24,31 +25,48 @@
         <nav class="primary">
           <a href="#">What is Shuffle?</a>
           <a href="#">Out Backers</a>
+          <div class="share-buttons">
+            <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fgetshuffle.com%2F&amp;width=88px&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=21&amp;appId=1377821332497022" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:88pxpx; height:21px; display-inline:block" allowTransparency="true"></iframe>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://getshuffle.com/">Tweet</a>
+          </div>
         </nav>
       </header>
     
       <section class="clearfix wrapper">
         <div class="left">
-          <img src="img/iphone.png" width="375" height="650" class="iphone">
+          <img src="img/iphone.png" width="380" height="675" class="iphone">
         </div>
         <div class="right">
           <h1>Disposable Phone Numbers</h1>
-            <p>Create and manage multiple unique disposable phone numbers with label identification. When done, simply delete.</p>
-            <a class="button">Watch the video</a>
-            <a class="button">Coming Soon</a>
+            <p>Create and manage multiple unique disposable phone numbers with label identification. 
+              <br>
+              <strong>When done, simply delete.</strong>
+            </p>
+            <div class="call-to-actions">
+              <a class="button blue"><span class="symbol-play"></span>Watch the video</a>
+              <a class="button"><span class="symbol-apple"></span>Coming Soon</a>
+            </div>
             <p class="small-print">We’re launching with US and Canadian numbers. More countries will be added in 2015. Shuffle for Android will be available mid 2015.</p>
           </div>
       </section>
 
       <footer>
-        <p>&copy; Shuffle 2014. <a href="#">Contact</a></p>
+        <div class="wrapper">
+          <div class="support-logos right">
+            <p class="small-print">Please support us on</p>
+            <img src="img/kickstarter_logo.svg" width="192" height="23">
+            <img src="img/indiegogo_logo.jpg" width="150" height="30">
+          </div>
+          <div class="clearfix"></div>
+          <p class="copyright">&copy; Shuffle 2014. <a href="#">Contact</a></p>
+        </div>
       </footer>
 
     </div>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
     <!-- /****** Remove For Production ******* -->
     <script src="http://localhost:35729/livereload.js"></script>
     <!-- ******* Remove For Production ******/ -->
-
   </body>
 </html>

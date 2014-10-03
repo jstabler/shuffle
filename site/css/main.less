@@ -3,7 +3,11 @@
 @import 'top_css.less';
 
 h1.logo {
-  float: left; width: 85%; text-align: left; color:@c-title;
+  float: left;
+  width: 85%;
+  text-align: left;
+  color:@c-title;
+  margin-top: 0;
 
   span {
     display: none;
@@ -15,24 +19,51 @@ h1.logo {
    =============== */
 html.touch {//override if touch device
   .page > header {height: auto; top: 0}
-} 
+}
 
-h1,h2,h3,h4 {font-weight: 500; text-transform: uppercase; text-align: left;}
+h1,h2,h3,h4 {font-weight: 500; text-align: left;}
+
+h1 {
+  font-size: 36px;
+  line-height: 45px;
+  color: @c-title;
+}
+p {
+  color: @c-nav;
+}
 
 /* ===============
   LESS Variables
    =============== */
 @c-text: #222;
+@c-text-light: #7c8285;
 @c-selection: #b3d4fc;
-@c-title: black;
+@c-title: #252e33;
 @c-nav: #7f868a;
-@c-nav-hover: #7f868a;
+@c-nav-hover: @c-link;
 @c-link: #0099ff;
 @c-link-hover: #0099ff;
+@c-button: #8f9599;
+@c-button-blue: @c-link;
+
+@main-font:'Roboto', sans-serif;
 
 /* ==========================================================================
    General styles
    ========================================================================== */
+
+body {
+  background: url(../img/background.jpg) center center;
+  background-size: cover;
+}
+
+nav.primary .share-buttons {
+  float: right;
+  iframe {
+    width: 80px;
+    margin-top: 4px;
+  }
+}
 
 .left,
 .right {
@@ -45,14 +76,74 @@ h1,h2,h3,h4 {font-weight: 500; text-transform: uppercase; text-align: left;}
 }
 
 .iphone {
-  margin-left: -40px;
+  margin-left: -35px;
+  margin-bottom: -150px;
+}
+
+.button {
+  background: @c-button;
+  color: white;
+  padding:16px;
+  margin-right:12px;
+  .rounded(3px);
+  &:hover {
+    color: white;
+    background: @c-button-blue;
+  }
+  &.blue {
+    background: @c-button-blue;
+    &:hover {
+      background: @c-button;
+    }
+  }
+}
+
+.call-to-actions {
+  margin: 50px 0 40px;
+}
+
+.small-print {
+  font-size: 12px;
+  color: @c-text-light;
+  margin-bottom: 0;
+}
+
+
+.symbol-apple,
+.symbol-play {
+  display: inline-block;
+  width: 24px;
+  height: 28px;
+  background: url(../img/symbols.png) center -1px;
+  margin-right: 11px;
+  vertical-align: bottom;
+}
+.symbol-play {
+  background-position: bottom center
 }
 
 /* ===============
   Footer
    =============== */
-.footer-container {
-  text-align: left;
+.page > footer {
+  background: #fff;
+  border-top: 1px solid #dadfe3;
+  font-size: 13px;
+  
+  margin: 0;
+  padding: 20px 0 40px;
+
+  p.copyright {
+    margin-bottom: 0;
+    margin-top: 50px;
+  }
+}
+
+.support-logos {
+  margin-top: -20px;
+  img {
+    margin-right: 30px;
+  }
 }
 
 /* ==========================================================================
@@ -77,15 +168,18 @@ h1,h2,h3,h4 {font-weight: 500; text-transform: uppercase; text-align: left;}
   nav.primary {
 
     float: right;
-    width: 350px;
+    width: 450px;
     display: block !important;
     margin: 20px 0 0 0;
 
     a {
       float: left;
-      margin: 0 5px;
+      margin: 0 10px;
       padding: 0 5px;
       margin-bottom: 0;
+    }
+    .share-buttons {
+      float: right;
     }
   }
 }
@@ -100,6 +194,7 @@ h1,h2,h3,h4 {font-weight: 500; text-transform: uppercase; text-align: left;}
   }
 
   .right {
+    width: 50%;
     float: right;
   }
 }
@@ -109,10 +204,10 @@ h1,h2,h3,h4 {font-weight: 500; text-transform: uppercase; text-align: left;}
      Maximal Width
      =============== */
   .wrapper,
-  .page > header,
-  .page > footer {
+  .page > header {
     width: 825px; /* 1140px - 10% for margins */
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .three_column {

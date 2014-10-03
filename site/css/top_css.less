@@ -54,14 +54,17 @@ textarea {
 /* ===== Initializr Styles ======================== */
 
 body {
-  font: 16px/26px Helvetica, Helvetica Neue, Arial;
+  font: 18px/28px @main-font; font-weight: 400;
 }
 
 .wrapper,
-.page > header,
-.page > footer {
+.page > header {
   width: 90%;
   margin: 0 5%;
+}
+
+.page > header {
+  margin: 40px auto;
 }
 
 a,
@@ -77,11 +80,11 @@ a:hover {
 nav a {
   color: @c-nav;
   display: block;
+  font-size: 14px;
   margin-bottom: 10px;
   padding: 15px 0;
   text-align: center;
   text-decoration: none;
-  font-weight: bold;
 }
 
 nav a:hover, nav a.active {
