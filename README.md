@@ -2,7 +2,7 @@
 
 #### View
     
-    git clone shuffle
+    git clone git@github.com:jstabler/shuffle.git
     cd shuffle/site
     python -m SimpleHTTPServer
 
