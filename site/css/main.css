@@ -309,9 +309,15 @@ p {
 /* ==========================================================================
    General styles
    ========================================================================== */
-body {
+.backgradient {
+  position: fixed;
   background: url(../img/background.jpg) center center;
   background-size: cover;
+  height: 75%;
+  width: 100%;
+  min-height: 720px;
+  top: 0;
+  z-index: -1;
 }
 nav.primary .share-buttons {
   float: right;
@@ -328,9 +334,12 @@ nav.primary .share-buttons iframe {
 .right {
   float: right;
 }
-.iphone {
+.left img.iphone {
   margin-left: -35px;
   margin-bottom: -150px;
+  width: 104%;
+  max-width: auto;
+  height: auto;
 }
 .button {
   background: #8f9599;
